@@ -296,7 +296,7 @@ INSERT INTO `creature_loot_template`                           (`entry`, `item`,
 
 -- Paladin spell books
 /* Book: Crusader Strike   (25819) on Herod         (3975)  */ (3975,     @START_ITEM_ID,    51,                    0,         1,               1,          0,             'Book: Crusader Strike'),
-/* Book: Hand of Reckoning (25820) on Vishas        (3983)  */ (3975,     @START_ITEM_ID+1,  51,                    0,         1,               1,          0,             'Book: Hand of Reckoning'),
+/* Book: Hand of Reckoning (25820) on Vishas        (3983)  */ (3983,     @START_ITEM_ID+1,  51,                    0,         1,               1,          0,             'Book: Hand of Reckoning'),
 /* Book: Avenger's Shield  (25831) on Dextren       (1663)  */ (1663,     @START_ITEM_ID+12, 51,                    0,         1,               1,          0,             'Book: Avenger\'s Shield'),
 
 -- Druid spell books
