@@ -69,11 +69,40 @@ namespace cmangos_module
                 }
             }
 
+            // Set ice lance crit when target is frozen
             if (spellInfo->Id == NEW_BALANCING_SPELL_ICE_LANCE)
             {
                 if (spellTarget && spellTarget->isFrozen())
                 {
                     spell->SetDamageDoneModifier(3.f, EFFECT_INDEX_0);
+                }
+            }
+
+            // Set shaman weapon enchant in offhand weapon                                             
+            if (caster->GetTypeId() == TYPEID_PLAYER && caster->getClass() == CLASS_SHAMAN)
+            {
+                const bool isShamanEnchant = spellInfo->Id == 8017 || spellInfo->Id == 8018 || spellInfo->Id == 8019 || spellInfo->Id == 10399 || spellInfo->Id == 16314 || spellInfo->Id == 16315 || spellInfo->Id == 16316 || // Rockbiter
+                                             spellInfo->Id == 8024 || spellInfo->Id == 8027 || spellInfo->Id == 8030 || spellInfo->Id == 16339 || spellInfo->Id == 16341 || spellInfo->Id == 16342 ||                           // Flametongue
+                                             spellInfo->Id == 8033 || spellInfo->Id == 8038 || spellInfo->Id == 10456 || spellInfo->Id == 16355 || spellInfo->Id == 16356 ||                                                    // Frostbrand
+                                             spellInfo->Id == 8232 || spellInfo->Id == 8235 || spellInfo->Id == 10486 || spellInfo->Id == 16362;                                                                                // Windfury
+
+                if (isShamanEnchant)
+                {
+                    Player* playerCaster = (Player*)caster;
+                    Item* itemTarget = playerCaster->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_OFFHAND);
+                    const ItemPrototype* itemInfo = itemTarget ? itemTarget->GetProto() : nullptr;
+                    if (itemInfo && (itemInfo->InventoryType == INVTYPE_WEAPON || itemInfo->InventoryType == INVTYPE_WEAPONOFFHAND))
+                    {
+                        const int32 duration = spellInfo->EffectBasePoints[0];
+                        const uint32 enchantID = spellInfo->EffectMiscValue[0];
+
+                        // remove old enchanting before applying new if equipped
+                        playerCaster->ApplyEnchantment(itemTarget, TEMP_ENCHANTMENT_SLOT, false);
+
+                        // Add new enchanting
+                        itemTarget->SetEnchantment(TEMP_ENCHANTMENT_SLOT, enchantID, duration * 1000, 0, playerCaster->GetObjectGuid());
+                        playerCaster->ApplyEnchantment(itemTarget, TEMP_ENCHANTMENT_SLOT, true);
+                    }
                 }
             }
         }

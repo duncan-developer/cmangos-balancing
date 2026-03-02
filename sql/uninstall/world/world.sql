@@ -76,6 +76,8 @@ UPDATE `spell_template` SET `EffectBasePoints1`= -7 WHERE `Id`= 16110;
 UPDATE `spell_template` SET `EffectBasePoints1`= -9 WHERE `Id`= 16111;
 UPDATE `spell_template` SET `EffectBasePoints1`= -11 WHERE `Id`= 16112;
 
+UPDATE `spell_template` SET `Effect3`= 0, `EffectTriggerSpell3`= 0 WHERE `Id`= 16269;
+
 UPDATE `spell_template` SET `EffectBasePoints1`= -3 WHERE `Id`= 19416;
 UPDATE `spell_template` SET `EffectBasePoints1`= -5 WHERE `Id`= 19417;
 UPDATE `spell_template` SET `EffectBasePoints1`= -7 WHERE `Id`= 19418;

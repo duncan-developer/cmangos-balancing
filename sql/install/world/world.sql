@@ -168,6 +168,9 @@ UPDATE `spell_template` SET `EffectBasePoints1`= -19 WHERE `Id`= 16110;
 UPDATE `spell_template` SET `EffectBasePoints1`= -25 WHERE `Id`= 16111;
 UPDATE `spell_template` SET `EffectBasePoints1`= -31 WHERE `Id`= 16112;
 
+-- Two-Handed Axes and Maces talent also learns dual wield
+UPDATE `spell_template` SET `Effect3`= 36, `EffectTriggerSpell3`= 674 WHERE `Id`= 16269;
+
 -- Hunter
 -- Efficiency upgrade from 10% to 30%
 UPDATE `spell_template` SET `EffectBasePoints1`= -7  WHERE `Id`= 19416;

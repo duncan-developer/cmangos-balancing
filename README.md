@@ -35,6 +35,7 @@ List of changes:
 		- Added Water Shield (33429): https://www.wowhead.com/classic/spell=408510
 		- Added Overload: https://www.wowhead.com/classic/spell=408438
 		- Modified Convection talent to increase mana reduction up to 30%
+		- Modified Two-Handed Axes and Maces talent to also learns dual wield
 	- Hunter
 		- Added Aspect of the Viper (33436): https://www.wowhead.com/classic/spell=34074
 		- Modified Efficiency talent to increase mana reduction up to 30%
@@ -56,7 +57,7 @@ List of changes:
 Classic
 
 # Version
-21
+22
 
 # How to install
 1. Follow the instructions in https://github.com/davidonete/cmangos-modules?tab=readme-ov-file#how-to-install
