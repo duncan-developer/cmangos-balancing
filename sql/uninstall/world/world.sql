@@ -39,6 +39,10 @@ UPDATE `spell_template` SET `Effect1` = 10, `EffectMiscValue1` = 0, `EffectBaseP
 UPDATE `spell_template` SET `Effect1` = 10, `EffectMiscValue1` = 0, `EffectBasePoints1` = 93 WHERE Id = 20340;
 UPDATE `spell_template` SET `Effect1` = 10, `EffectMiscValue1` = 0, `EffectBasePoints1` = 60 WHERE Id = 20343;
 
+UPDATE `spell_template` SET `DurationIndex` = 1, `Effect1` = 6, `Effect2` = 6, `EffectApplyAuraName1` = 137, `EffectApplyAuraName2` = 137, `EffectBasePoints1` = -6, `EffectBasePoints2` = -6 WHERE Id = 67;
+UPDATE `spell_template` SET `DurationIndex` = 1, `Effect1` = 6, `Effect2` = 6, `EffectApplyAuraName1` = 137, `EffectApplyAuraName2` = 137, `EffectBasePoints1` = -11, `EffectBasePoints2` = -11 WHERE Id = 26017;
+UPDATE `spell_template` SET `DurationIndex` = 1, `Effect1` = 6, `Effect2` = 6, `EffectApplyAuraName1` = 137, `EffectApplyAuraName2` = 137, `EffectBasePoints1` = -16, `EffectBasePoints2` = -16 WHERE Id = 26018;
+
 UPDATE `spell_template` SET `EffectBasePoints1`= -11 WHERE `Id` = 16833;
 UPDATE `spell_template` SET `EffectBasePoints1`= -21 WHERE `Id` = 16834;
 UPDATE `spell_template` SET `EffectBasePoints1`= -31 WHERE `Id` = 16835;

@@ -120,6 +120,11 @@ UPDATE `spell_template` SET `Effect1` = 122, `EffectMiscValue1` = 6, `EffectBase
 UPDATE `spell_template` SET `Effect1` = 122, `EffectMiscValue1` = 6, `EffectBasePoints1` = 3 WHERE Id = 20340;
 UPDATE `spell_template` SET `Effect1` = 122, `EffectMiscValue1` = 6, `EffectBasePoints1` = 2 WHERE Id = 20343;
 
+-- Vindication will now reduce up to 15% attack power and duration is 30 seconds
+UPDATE `spell_template` SET `DurationIndex` = 9, `Effect1` = 6, `Effect2` = 0, `EffectApplyAuraName1` = 166, `EffectApplyAuraName2` = 0, `EffectBasePoints1` = -6, `EffectBasePoints2` = 0 WHERE Id = 67;
+UPDATE `spell_template` SET `DurationIndex` = 9, `Effect1` = 6, `Effect2` = 0, `EffectApplyAuraName1` = 166, `EffectApplyAuraName2` = 0, `EffectBasePoints1` = -11, `EffectBasePoints2` = 0 WHERE Id = 26017;
+UPDATE `spell_template` SET `DurationIndex` = 9, `Effect1` = 6, `Effect2` = 0, `EffectApplyAuraName1` = 166, `EffectApplyAuraName2` = 0, `EffectBasePoints1` = -16, `EffectBasePoints2` = 0 WHERE Id = 26018;
+
 -- Druid
 -- Natural Shapeshifter upgrade from 30% to 60%
 UPDATE `spell_template` SET `EffectBasePoints1`= -21 WHERE `Id` = 16833;

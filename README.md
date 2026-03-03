@@ -15,6 +15,7 @@ List of changes:
 		- Modified Judgement spells so different debuffs can be placed on the same target
 		- Modified Exorcism so it can be casted on any target
 		- Modified Seal of Light and Judgement of Light to heal for a % of max health
+		- Modified Vindication to reduce attack power up to 15% and increase duration to 30 seconds
 	- Druid
 		- Added Starfall (33397): https://www.wowhead.com/classic/spell=439748
 		- Added Sunfire (33399): https://www.wowhead.com/classic/spell=414684
@@ -57,7 +58,7 @@ List of changes:
 Classic
 
 # Version
-22
+23
 
 # How to install
 1. Follow the instructions in https://github.com/davidonete/cmangos-modules?tab=readme-ov-file#how-to-install
